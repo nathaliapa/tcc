@@ -1,0 +1,68 @@
+import requests
+
+BASE = " http://127.0.0.1:5000/"
+
+
+response = requests.get(BASE + "hello")
+
+print(response.json())
+
+
+//////********************///////////
+minha modificação
+
+import request
+import json
+
+// conecção da api com o banco de dados local
+BASE = " http://127.0.0.1:5000/"
+
+// pegar noticas para a segunda pagina
+
+noticias = request.get(BASE + "noticas")
+noticias = noticias.json()
+baseNoticas = noticas ['titulo']['img']['descrição']
+print(baseNoticias)
+
+// passar as noticias para o carrousle e para a pagina inical
+
+noticias = request.get(BASE + "noticas")
+noticias = noticias.json()
+baseNoticas = noticas ['titulo']['img']['descrição']
+carrouselNot = noticas ['titulo']['img'] 
+print(baseNoticias)
+print(carrouselNot)
+
+
+// passar as informações para o topico
+
+
+topicos = request.get(BASE + "topicos")
+topicos = noticias.json()
+baseTopicos = topicos[nome]
+print(baseTopicos)
+
+
+/////////************************//////////
+
+****** api em flask ****
+//comando a ser digitado no terminal
+# conda install flask
+# pip install flask
+
+from flash import Flask
+
+
+
+app=Flash(__name__)
+
+@app.route("/") // rota inical pelo barra 
+
+def home():
+  return "<h1> home page </h1>"  // achamar a html da pagina home aqui 
+  
+if __name__ == " __main__":
+  app.run(debug=True)
+ 
+
+
